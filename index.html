@@ -11,7 +11,8 @@
 </head>
 <body>
 
-    <div class="container1">
+        <div class="div1">
+            
         <h2 class="conta"> info@laplazamalaga.com"</h2> 
 
         <div class="loc">
@@ -27,8 +28,11 @@
             </div>
             
         </div> 
-        
-        <img class="logo" src="./1M.png" alt="logo"> <br>
+    </div>
+
+        <div class="div2">
+            <img class="logo" src="./1M.png" alt="logo"> <br>
+        </div>
         <div class="menu">
     <h3> food <br> 
     <img class="food" src="./food.png" alt="">
@@ -43,22 +47,25 @@
 
 
         </div>
-
+<div class="div3">
         <div class="grid-stuff">
             <h1>  restaurante <br> Miralmonte</h1>
             <img class="book" src="./book.png" alt="">
         </div>
+    </div>
+    <div class="div4">
         <div class="nav">
             <div class="btn">contact</div>
             <div class="btn1">discover</div>
 
         </div>
     </div>
+        
 
        
     <script>
         document.querySelector('.food').onclick= function(){
-            window.open("https://github.com/samertime92/miralmonte/AF%20Menu%20Miralmonte%20A3%20horizontal%20250%20UND.pdf")
+            window.open("https://github.com/samertime92/miralmonte/main/AF%20Menu%20Miralmonte%20A3%20horizontal%20250%20UND.pdf")
         }
         function change(){
             document.querySelector('.logo').style.transform = "scale(1.2)rotateY(180deg)";
@@ -91,6 +98,8 @@
             document.querySelector('.conta').style.transform = "scale(0)"
             document.querySelector('.loc').style.transform = "scale(0.6)"
             document.querySelector('.menu').style.transform = "scale(0)"
+            document.querySelector('.div1').style.height = "150px"
+            
 
         }
         document.querySelector('.book').onclick= function(){
@@ -110,33 +119,38 @@
     </script>
 </body>
 <style>
+    img{margin:0px auto}
+    .div1{transition-property: overflow , height  ;overflow:hidden;height:0px;display: block;position: relative;top:0px;;margin: 10px auto; transition-duration: 0.5s,0.5s ;}
+    .div2{transition:transform;height:150px;display: flex;position: relative;top:0px;;margin: 10px auto;transition-duration:  1s; justify-content: center;}
+    .div3{transition:transform;height:150px;display: flex;position: relative;top:0px;;margin: 80px auto 20px auto;transition-duration:  1s; justify-content: center;}
+    .div4{transition:transform;height:150px;display: flex;position: relative;top:0px;;margin: 20px auto 0px auto;transition-duration:  1s; justify-content: center;}
+    
     h3{font-size: 25px;color: white}
     .food{filter: invert(100%);;width: 60%;;}
-    .drinks{filter: invert(100%);width:60%}
+    .drinks{filter: invert(100%);width:60%;}
 
-    .menu{position: absolute;display: grid;grid-template-columns: 1fr 1fr ;top: 35%;transform: scale(0);left:25%;transition:0.4s}
+    .menu{position: relative;display: grid;grid-template-columns: 1fr 1fr ;top: 0%;transform: scale(0);left:0%;transition:0.4s;margin:0px auto;height: 0px;}
     .merced{font-size: 25px;}
     .alcazabilla{font-size: 25px;}
     /* img:hover{transition:0.3s;filter: invert(100%)} */
-    .loc{transition:0.5s;position:absolute;display: grid;grid-template-columns: 1fr 1fr ;grid-template-rows: 1fr;margin: 0px 5px;padding:0px;transform: scale(0); border:none;gap:50px ;top:10px;filter: invert(100%);}
-.conta{display:inline-block;font-size:20px;color: white;transition:0.3s;transform: scale(0);margin:0px 10px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;top:50px;position: relative;}
+    .loc{transition:0.5s;position:relative;display: grid;grid-template-columns: 1fr 1fr ;grid-template-rows: 1fr;margin: 0px auto;padding:0px;transform: scale(0); border:none;gap:50px ;top:0px;filter: invert(100%);}
+.conta{display:none;font-size:20px;color: white;transition:0.3s;transform: scale(0);margin:0px 10px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;top:50px;position: relative;}
     /* .sol{color:rgb(107, 54, 54)} */
     .btn1{transition:0.3s;padding:5px; font-size:30px;margin: 0px 20px;box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.411);border-top-left-radius:100px ;border-top-right-radius:100px;border-bottom-left-radius:100px;border: solid rgb(0, 0, 0) 0px;filter: drop-shadow(0px 0px 0px rgb(255, 123, 0));border-top:none;border-left:none}
 .book{transform: scale(0.6);margin-left: 20px;animation:booky 1s 2s alternate-reverse ease infinite;position: relative;}
     .btn{transition:0.3s;padding:5px; font-size:30px;margin: 0px 20px;box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.411);border-top-left-radius:100px ;border-top-right-radius:100px;border-bottom-right-radius:100px;border: solid rgb(0, 0, 0) 0px;filter: drop-shadow(0px 0px 0px rgb(255, 123, 0));border-top:none;border-left:none}
-    .nav{display: flex;justify-content: space-around;position: relative;top:0%;;margin:30px auto;width: 100px;height: 50px;}
+    .nav{display: flex;justify-content: center;position: relative;top:0%;;margin:0px auto;width: 100px;height: 50px;}
     .book:hover{animation-play-state: paused;transition:0.3s;filter:invert(100%);transform: rotateY(180deg)scale(0.7)}
     .grid-stuff{display: grid ;grid-template-columns: 1fr 1fr;}
     h1{position:relative;font-size: 30px;font-family: 'Freehand', cursive;margin:0px auto;padding: 0px }
-    .container1{padding: 0px ;border:double brown  10px ;height:505px;border-top-left-radius: 20px;;border-left:none;border-bottom-left-radius: 20px;}
-    .logo{transition:1s;position:relative;width:100%;margin:0px auto;transform: scale(0.5);}
-body{overflow:scroll;margin:0px ;padding:10px;background-color: #FE5E00;border: double 10px brown;border-right:none}
+    .logo{transition:1s;position:relative;margin:0px;padding:0px;transform: scale(1);top:0px}
+body{overflow:scroll;margin:0px ;padding:10px;background-color: #FE5E00;}
 @keyframes booky {
     0%{ top:10px; }
     100%{top:0px; }
     
 }
-@media only screen and (min-width: 320px) and (min-height:812px){
+/* @media only screen and (min-width: 320px) and (min-height:812px){
     .container1{padding: 0px ;border:double brown  10px ;height:750px;border-top-left-radius: 20px;;border-left:none;border-bottom-left-radius: 20px;}
     .nav{display: flex;justify-content: space-around;position: relative;top:0%;;margin:100px auto;width: 100px;height: 50px;}
     .conta{display:inline-block;font-size:20px;color: white;transition:0.3s;transform: scale(0);margin:0px 40px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;top:50px;position: relative;}
@@ -251,7 +265,7 @@ body{overflow:scroll;margin:0px ;padding:10px;background-color: #FE5E00;border: 
     .logo{transition:1s;position:relative;width:100%;margin:0px auto;transform: scale(1.2);}
     h1{position:relative;font-size: 35px;font-family: 'Freehand', cursive;margin:0px auto;padding: 0px }
 
-}
+} */
 
 
 
