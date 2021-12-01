@@ -10,19 +10,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Freehand&display=swap" rel="stylesheet">
 </head>
 <body>
+   
+       <div class="div0">
+        <h2 class="conta"> info@laplazamalaga.com"</h2> 
 
+        </div>
         <div class="div1">
             
-        <h2 class="conta"> info@laplazamalaga.com"</h2> 
 
         <div class="loc">
 
             <div>
-                <img class="loc1" src="./location.png" alt="">
+                <img class="loc1" src="./assets/location.png" alt="">
                 <h2 class="merced"> merced</h2>
             </div>
             <div>
-                <img class="loc2" src="./location.png" alt="">
+                <img class="loc2" src="./assets/location.png" alt="">
                 <h2 class="merced"> alcazabilla</h2>
     
             </div>
@@ -31,26 +34,29 @@
     </div>
 
         <div class="div2">
-            <img class="logo" src="./1M.png" alt="logo"> <br>
+            <img class="logo" src="./assets/1M.png" alt="logo"> <br>
         </div>
-        <div class="menu">
-    <h3> food <br> 
-    <img class="food" src="./food.png" alt="">
+        <div class="div5">
+            <!-- <div class="menu"> -->
+                <img class="food" src="./assets/food.png" alt="">
 
-    </h3>
-
-    <h3>drinks 
-        <br>
-    <img class="drinks" src="./drinks.png" alt="">
-
-    </h3>
-
-
+                <img class="drinks" src="./assets/drinks.png" alt="">
+            
+            
+                    <!-- </div> -->
         </div>
+        <div class="div6">
+            <p id="h3h3"> food  </p>
+            <p id="h2h2">drinks </p>
+            
+            
+        </div>
+
+   
 <div class="div3">
         <div class="grid-stuff">
             <h1>  restaurante <br> Miralmonte</h1>
-            <img class="book" src="./book.png" alt="">
+            <img class="book" src="../assets/book.png" alt="">
         </div>
     </div>
     <div class="div4">
@@ -86,24 +92,38 @@
             document.querySelector('.btn1').style.color = "black";
             document.querySelector('.btn1').style.background = "none"
             document.querySelector('.loc').style.transform = "scale(0)"
-            document.querySelector('.menu').style.transform = "scale(0)"
+            // document.querySelector('.menu').style.transform = "scale(0)"
+            document.querySelector('.div0').style.height = "30px"
+            document.querySelector('.div1').style.height = "0px"
+            document.querySelector('.div2').style.height = "100px"
+            document.querySelector('.logo').style.transform = "scale(0.2)"
+            document.getElementById('h3h3').style.opacity = "0"
+            document.getElementById('h2h2').style.opacity = "0"
+            document.querySelector('.div5').style.height = "0px"
+
+
 
         }
         document.querySelector('.btn1').onclick= function(){
-            document.querySelector('.logo').style.transform = "scale(0.1)"
+            document.querySelector('.logo').style.transform = "scale(1)"
             document.querySelector('.btn1').style.color = " white"
             document.querySelector('.btn1').style.backgroundColor = " rgb(107, 54, 54)"
             document.querySelector('.btn').style.color = "black";
             document.querySelector('.btn').style.background = "none"
             document.querySelector('.conta').style.transform = "scale(0)"
             document.querySelector('.loc').style.transform = "scale(0.6)"
-            document.querySelector('.menu').style.transform = "scale(0)"
+            // document.querySelector('.menu').style.transform = "scale(0)"
             document.querySelector('.div1').style.height = "150px"
-            
+            document.querySelector('.div0').style.height = "0px"
+            document.getElementById('h3h3').style.opacity = "0"
+            document.getElementById('h2h2').style.opacity = "0"
+            document.querySelector('.div5').style.height = "0px"
+
+
 
         }
         document.querySelector('.book').onclick= function(){
-            document.querySelector('.logo').style.transform = "scale(0.1)"
+            document.querySelector('.logo').style.transform = "scale(0.3)"
             document.querySelector('.conta').style.transform = "scale(0)"
 
             
@@ -112,29 +132,44 @@
             document.querySelector('.btn').style.color = "black";
             document.querySelector('.btn').style.background = "none"
             document.querySelector('.loc').style.transform = "scale(0)"
-            document.querySelector('.menu').style.transform = "scale(1)"
+            // document.querySelector('.menu').style.transform = "scale(1)"
+            document.querySelector('.div5').style.height = "100px"
+            document.querySelector('.div6').style.height = "100px"
+            // document.querySelector('h3').style.fontSize = "25px"
+            // document.querySelector('.h3h3').style.transform = "scale(1)"
+            document.getElementById('h3h3').style.opacity = "1"
+            document.getElementById('h2h2').style.opacity = "1"
+
 
 
         }
     </script>
 </body>
 <style>
+#h3h3{font-size: 25px;color: white;transform: scale(1);opacity: 0;transition: 1s;}
+#h2h2{font-size: 25px;color: white;transform: scale(1);opacity: 0;transition: 1s;}
+
+     .food{filter: invert(100%);transform: scale(0.7);}
+    .drinks{filter: invert(100%);transform: scale(0.7);}
+
+    /* h2{margin:0px  auto;} */
     img{margin:0px auto}
-    .div1{transition-property: overflow , height  ;overflow:hidden;height:0px;display: block;position: relative;top:0px;;margin: 10px auto; transition-duration: 0.5s,0.5s ;}
+    .div0{transition-property: overflow , height  ;overflow:hidden;height:0px;display: flex;position: relative;top:0px;;margin: 40px auto 0px auto; transition-duration: 0.5s,0.5s ;justify-content:center;}
+
+    .div1{transition-property: overflow , height  ;overflow:hidden;height:0px;display: flex;position: relative;top:0px;;margin: 10px auto; transition-duration: 0.5s,0.5s ;justify-content:center;}
     .div2{transition:transform;height:150px;display: flex;position: relative;top:0px;;margin: 10px auto;transition-duration:  1s; justify-content: center;}
     .div3{transition:transform;height:150px;display: flex;position: relative;top:0px;;margin: 80px auto 20px auto;transition-duration:  1s; justify-content: center;}
     .div4{transition:transform;height:150px;display: flex;position: relative;top:0px;;margin: 20px auto 0px auto;transition-duration:  1s; justify-content: center;}
+    .div5{transition:transform;height:150px;display: flex;position: relative;top:0px;;margin: 0px auto 0px auto;transition-duration:  1s;height: 0px;justify-content: space-around;transition-property: height;transition-duration: 0.5s;}
+    .div6{transition:transform;height:150px;display: flex;position: relative;top:0px;;margin: 0px auto 0px auto;transition-duration:  1s;height: 0px;justify-content: space-around;transition-property: height;transition-duration: 0.5s;height:0px}
     
-    h3{font-size: 25px;color: white}
-    .food{filter: invert(100%);;width: 60%;;}
-    .drinks{filter: invert(100%);width:60%;}
-
-    .menu{position: relative;display: grid;grid-template-columns: 1fr 1fr ;top: 0%;transform: scale(0);left:0%;transition:0.4s;margin:0px auto;height: 0px;}
+   
+    /* .menu{position: relative;display: ;grid-template-columns: 1fr 1fr ;top: 0%;transform: scale(0);transition:0.4s;margin:0px auto;height: 0px;} */
     .merced{font-size: 25px;}
     .alcazabilla{font-size: 25px;}
     /* img:hover{transition:0.3s;filter: invert(100%)} */
     .loc{transition:0.5s;position:relative;display: grid;grid-template-columns: 1fr 1fr ;grid-template-rows: 1fr;margin: 0px auto;padding:0px;transform: scale(0); border:none;gap:50px ;top:0px;filter: invert(100%);}
-.conta{display:none;font-size:20px;color: white;transition:0.3s;transform: scale(0);margin:0px 10px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;top:50px;position: relative;}
+.conta{display:block;font-size:20px;color: white;transition:0.3s;;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;top:0px;position: relative;margin: 0px auto;}
     /* .sol{color:rgb(107, 54, 54)} */
     .btn1{transition:0.3s;padding:5px; font-size:30px;margin: 0px 20px;box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.411);border-top-left-radius:100px ;border-top-right-radius:100px;border-bottom-left-radius:100px;border: solid rgb(0, 0, 0) 0px;filter: drop-shadow(0px 0px 0px rgb(255, 123, 0));border-top:none;border-left:none}
 .book{transform: scale(0.6);margin-left: 20px;animation:booky 1s 2s alternate-reverse ease infinite;position: relative;}
@@ -150,6 +185,7 @@ body{overflow:scroll;margin:0px ;padding:10px;background-color: #FE5E00;}
     100%{top:0px; }
     
 }
+
 /* @media only screen and (min-width: 320px) and (min-height:812px){
     .container1{padding: 0px ;border:double brown  10px ;height:750px;border-top-left-radius: 20px;;border-left:none;border-bottom-left-radius: 20px;}
     .nav{display: flex;justify-content: space-around;position: relative;top:0%;;margin:100px auto;width: 100px;height: 50px;}
