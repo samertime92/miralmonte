@@ -13,20 +13,22 @@
    
        <div class="div0">
         <h2 class="conta"> info@laplazamalaga.com"</h2> 
-
         </div>
+        <div class="div00">
+            <a class="conta" href="tel:952-452-229">952 452 229</a> 
+            </div>
         <div class="div1">
             
 
         <div class="loc">
 
             <div>
-                <img class="loc1" src="./location.png" alt="">
+                <img class="loc1" src="./assets/location.png" alt="">
                 <h2 class="merced"> merced</h2>
             </div>
             <div>
-                <img class="loc2" src="./location.png" alt="">
-                <h2 class="alcazabilla"> alcazabilla</h2>
+                <img class="loc2" src="./assets/location.png" alt="">
+                <h2 class="merced"> alcazabilla</h2>
     
             </div>
             
@@ -34,13 +36,13 @@
     </div>
 
         <div class="div2">
-            <img class="logo" src="./1M.png" alt="logo"> <br>
+            <img class="logo" src="./assets/1M.png" alt="logo"> <br>
         </div>
         <div class="div5">
             <!-- <div class="menu"> -->
-                <img class="food" src="./food.png" alt="">
+                <img class="food" src="./assets/food.png" alt="">
 
-                <img class="drinks" src="./drinks.png" alt="">
+                <img class="drinks" src="./assets/drinks.png" alt="">
             
             
                     <!-- </div> -->
@@ -56,7 +58,7 @@
 <div class="div3">
         <div class="grid-stuff">
             <h1>  restaurante <br> Miralmonte</h1>
-            <img class="book" src="./book.png" alt="">
+            <img class="book" src="../assets/book.png" alt="">
         </div>
     </div>
     <div class="div4">
@@ -71,29 +73,17 @@
        
     <script>
         document.querySelector('.food').onclick= function(){
-            window.open("https://github.com/samertime92/miralmonte/raw/main/AF%20Menu%20Miralmonte%20A3%20horizontal%20250%20UND.pdf")
+            window.open("https://github.com/samertime92/miralmonte/main/AF%20Menu%20Miralmonte%20A3%20horizontal%20250%20UND.pdf")
         }
-         document.querySelector('#h3h3').onclick= function(){
-            window.open("https://github.com/samertime92/miralmonte/raw/main/AF%20Menu%20Miralmonte%20A3%20horizontal%20250%20UND.pdf")
-        }
-         document.querySelector('.merced').onclick= function(){
-            window.open("https://goo.gl/maps/2YgemhSZc1Lmb4Xy5")
-        }
-         document.querySelector('.loc1').onclick= function(){
-            window.open("https://goo.gl/maps/AwTi8k6RobNPjfc67")
-        }
-         document.querySelector('.loc2').onclick= function(){
-            window.open("https://goo.gl/maps/2YgemhSZc1Lmb4Xy5")
-        }
-         document.querySelector('.alcazabilla').onclick= function(){
-            window.open("https://goo.gl/maps/AwTi8k6RobNPjfc67")
+        document.querySelector('.drinks').onclick= function(){
+            window.open("https://github.com/samertime92/miralmonte/main/AF%20Menu%20Miralmonte%20A3%20horizontal%20250%20UND.pdf")
         }
         function change(){
             document.querySelector('.logo').style.transform = "scale(1.2)rotateY(180deg)";
             document.querySelector('.logo').style.filter = "drop-shadow(20px 10px 10px rgba(0, 0, 0, 0.252))brightness(120%)";
         }
         function change1(){
-            document.querySelector('.logo').style.transform = "scale(0.5)"
+            document.querySelector('.logo').style.transform = "scale(0.8)"
         }
         setTimeout(change,0)
         setTimeout(change1,1000)
@@ -109,6 +99,8 @@
             document.querySelector('.loc').style.transform = "scale(0)"
             // document.querySelector('.menu').style.transform = "scale(0)"
             document.querySelector('.div0').style.height = "30px"
+            document.querySelector('.div00').style.height = "30px"
+
             document.querySelector('.div1').style.height = "0px"
             document.querySelector('.div2').style.height = "100px"
             document.querySelector('.logo').style.transform = "scale(0.2)"
@@ -133,6 +125,7 @@
             document.getElementById('h3h3').style.opacity = "0"
             document.getElementById('h2h2').style.opacity = "0"
             document.querySelector('.div5').style.height = "0px"
+            document.querySelector('.div00').style.height = "0px"
 
 
 
@@ -170,6 +163,7 @@
     /* h2{margin:0px  auto;} */
     img{margin:0px auto}
     .div0{transition-property: overflow , height  ;overflow:hidden;height:0px;display: flex;position: relative;top:0px;;margin: 40px auto 0px auto; transition-duration: 0.5s,0.5s ;justify-content:center;}
+    .div00{transition-property: overflow , height  ;overflow:hidden;height:0px;display: flex;position: relative;top:0px;;margin: 40px auto 0px auto; transition-duration: 0.5s,0.5s ;justify-content:center;}
 
     .div1{transition-property: overflow , height  ;overflow:hidden;height:0px;display: flex;position: relative;top:0px;;margin: 10px auto; transition-duration: 0.5s,0.5s ;justify-content:center;}
     .div2{transition:transform;height:150px;display: flex;position: relative;top:0px;;margin: 10px auto;transition-duration:  1s; justify-content: center;}
@@ -193,7 +187,7 @@
     .book:hover{animation-play-state: paused;transition:0.3s;filter:invert(100%);transform: rotateY(180deg)scale(0.7)}
     .grid-stuff{display: grid ;grid-template-columns: 1fr 1fr;}
     h1{position:relative;font-size: 30px;font-family: 'Freehand', cursive;margin:0px auto;padding: 0px }
-    .logo{transition:1s;position:relative;margin:0px;padding:0px;transform: scale(1);top:0px}
+    .logo{transition:1s;position:relative;margin:0px;padding:0px;transform: scale(1);top:0px;padding-left:20px;padding-right: 20px;}
 body{overflow:scroll;margin:0px ;padding:10px;background-color: #FE5E00;}
 @keyframes booky {
     0%{ top:10px; }
